@@ -1,4 +1,4 @@
-# MercariHackathon
+# Mercari Hackathon
 
 ## Parking Exchange
 
