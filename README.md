@@ -21,7 +21,7 @@ Possible options for search:
 - paid rental of spot (post your spot with a price or post desired destination of your parking with proposition of price) 
 - bonus points, and internal ranking system based exchanges etc.
 
-Creating robust ranking system and internal currency might be another feature of this service allowing true peer to peer exchanges without much need for external monitoring and administration.
+Creating robust ranking system and internal currency might be another feature of this service, allowing true peer to peer exchanges without much need for external monitoring and administration.
 
 ### Technology stack
 
