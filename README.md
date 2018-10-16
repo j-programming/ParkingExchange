@@ -25,9 +25,9 @@ Of course, the ranking system and internal currency might be another feature of 
 
 ### Technology stack
 
-Web: Python with Django, CSS, HTML, Javascript with jQuery, Bootstrap  
-Android: Basic Android stack with Kotlin language, RxJava, Room, Retrofit, Google Maps or OSM and all the usuals.  
-API: Python with Django REST framework  
-Backend: Linux server, MySQL database, Apache2 webserver with mod_wsgi  
+**Web**: Python with Django, CSS, HTML, Javascript with jQuery, Bootstrap  
+**Android**: Basic Android stack with Kotlin language, RxJava, Room, Retrofit, Google Maps or OSM and all the usuals.  
+**API**: Python with Django REST framework  
+**Backend**: Linux server, MySQL database, Apache2 webserver with mod_wsgi  
 
 During the Hackathon we plan to focus on developing Android application and API
