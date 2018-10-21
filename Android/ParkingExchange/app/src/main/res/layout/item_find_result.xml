@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+                name="ViewModel"
+                type="eu.morningbird.parkingexchange.viewmodel.FindResultVM" />
+    </data>
+
+    <android.support.v7.widget.CardView
+            android:id="@+id/itemPlant"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="4dp"
+            app:cardElevation="4dp">
+
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:orientation="vertical">
+        <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground">
+
+
+            <ImageView
+                    android:id="@+id/plantImageView"
+                    android:src="@drawable/ic_placeholder"
+                    android:layout_width="100dp"
+                    android:layout_height="120dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+            <ImageView
+                    android:id="@+id/calendarIconImageView"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginStart="16dp"
+                    android:src="@drawable/ic_clock"
+                    app:layout_constraintBottom_toBottomOf="@+id/periodTextView"
+                    app:layout_constraintEnd_toStartOf="@+id/periodTextView"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/plantImageView"
+                    app:layout_constraintTop_toTopOf="@+id/periodTextView" />
+
+            <ImageView
+                    android:id="@+id/locationIconImageView"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginStart="16dp"
+                    android:src="@drawable/ic_pin"
+                    app:layout_constraintBottom_toBottomOf="@+id/locationTextView"
+                    app:layout_constraintEnd_toStartOf="@+id/locationTextView"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/plantImageView"
+                    app:layout_constraintTop_toTopOf="@+id/locationTextView" />
+
+            <ImageView
+                    android:id="@+id/waterDropletIconImageView"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_marginEnd="4dp"
+                    android:src="@drawable/ic_price_tag"
+                    app:layout_constraintBottom_toBottomOf="@+id/deadlineTextView"
+                    app:layout_constraintEnd_toStartOf="@+id/deadlineTextView"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/periodTextView"
+                    app:layout_constraintTop_toTopOf="@+id/deadlineTextView"
+                    />
+
+            <TextView
+                    android:id="@+id/nameTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:scrollHorizontally="false"
+                    android:text="@{ViewModel.name}"
+                    android:textColor="@android:color/primary_text_light"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@+id/locationIconImageView"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/plantImageView"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="Warsaw Spire, Central Warsaw" />
+
+            <TextView
+                    android:id="@+id/locationTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:scrollHorizontally="false"
+                    android:text="@{ViewModel.location}"
+                    android:textColor="?android:textColorSecondary"
+                    android:textSize="13sp"
+                    app:layout_constraintBottom_toTopOf="@+id/deadlineTextView"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/locationIconImageView"
+                    app:layout_constraintTop_toBottomOf="@+id/nameTextView"
+                    tools:text="50.028716, 19.851650" />
+
+            <TextView
+                    android:id="@+id/periodTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:text="@{ViewModel.time}"
+                    android:textColor="?android:textColorSecondary"
+                    android:textSize="13sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/waterDropletIconImageView"
+                    app:layout_constraintEnd_toStartOf="@+id/waterDropletIconImageView"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/calendarIconImageView"
+                    app:layout_constraintTop_toTopOf="@+id/waterDropletIconImageView"
+                    tools:text="Till 5:30 PM" />
+
+            <TextView
+                    android:id="@+id/deadlineTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:text="@{ViewModel.price}"
+                    android:textColor="?android:textColorSecondary"
+                    android:textSize="13sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/waterDropletIconImageView"
+                    app:layout_constraintTop_toBottomOf="@+id/locationTextView"
+                    tools:text="$2.5/h" />
+
+
+        </android.support.constraint.ConstraintLayout>
+            <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_gravity="right">
+                <Button
+                        android:layout_marginTop="12dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Show on map"
+                        style="@style/Base.Widget.AppCompat.Button.Borderless"/>
+                <Button
+                        android:layout_marginTop="12dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Buy"
+                        style="@style/Base.Widget.AppCompat.Button.Borderless"/>
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+</layout>

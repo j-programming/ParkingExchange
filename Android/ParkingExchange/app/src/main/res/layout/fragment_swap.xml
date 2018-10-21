@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent" xmlns:app="http://schemas.android.com/apk/res-auto"
+             tools:context=".view.SwapFragment">
+    <ProgressBar
+            android:id="@+id/resultsProgressBar"
+            android:layout_width="72dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="72dp"
+            android:layout_marginTop="24dp" android:layout_marginBottom="24dp"></ProgressBar>
+    <android.support.v7.widget.RecyclerView
+            android:id="@+id/listPlantsRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:paddingTop="16dp"
+            android:paddingBottom="128dp"
+            android:paddingEnd="16dp"
+            android:paddingStart="16dp"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            tools:itemCount="4"
+            tools:listitem="@layout/item_swap_result" />
+</FrameLayout>

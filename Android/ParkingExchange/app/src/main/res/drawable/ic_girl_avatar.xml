@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:shape="oval">
+
+            <solid
+                    android:color="@color/colorPrimary"/>
+            <size
+                    android:width="204dp"
+                    android:height="204dp"/>
+        </shape>
+    </item>
+    <item android:drawable="@drawable/ic_girl" android:width="204dp"
+          android:height="204dp"/>
+
+
+</layer-list>
