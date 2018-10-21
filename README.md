@@ -23,6 +23,15 @@ Possible options for search:
 
 Creating robust ranking system and internal currency might be another feature of this service, allowing true peer to peer exchanges without much need for external monitoring and administration.
 
+#### Hackathon work
+We've developed Android application, with the target to recreate all possible user actions.
+We've started working on REST API, but we've prioritized work over backend and algorithm part of task
+
+Example of data in database:
+(2, 'a', '50.062936', '19.811645', '1523', '0:16', '20:42', 'wants')
+This is example from user 'a', with the coordinates specified above. Additionaly, user wish to search in '1523' meter radius from specified location. He want place to be avaiable since 0:16 to 20:42. Last column says, that this is place wanted by user. In the other way the field would mean 'offers'
+
+
 ### Technology stack
 
 **Web**: Python with Django, CSS, HTML, Javascript with jQuery, Bootstrap  
